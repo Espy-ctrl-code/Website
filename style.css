@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    height: 50px;
+    background-color: #252525;
+    text-align: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid #1b1b1b;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    margin: auto;
+    height: 50px;
+}
+
+main {
+    background: #2D2D2A;
+    background: linear-gradient(135deg, #2d2d2a 0%, #4c4c47 25%, #c14953 100%);
+    padding-top: 50px;
+    color: white;
+    height: max-content;
+}
+
+
+.RandomChar {
+    width: 70%;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+
+
+    background-color: rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 25px 25px 55px     #25252523 ;
+
+
+}
+
+.RandomChar hr {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.t-1 {
+    margin-bottom: 20px;
+}
+
+.t-1 td{
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+
+    border: 2px solid #ffffff00;
+    background-color: #ffffff0e;
+}
+
+
+.RC-Generate, .RC-Reset {
+    padding: 5px;
+    width: 25%;
+    height: 50px;
+    font-size: 2rem;
+    margin: auto;
+    display: inline-block;
+    margin: 0px 20px;
+
+    background-color: #ffffff25;
+    border-radius: 5px;
+}
+
+.RC-Generate a, .RC-Reset a {
+    color: white;
+    text-decoration: none;
+}
