@@ -57,7 +57,8 @@ fetch('json/Minecraft-Blocks/minecraft_blocks.json')
 function GenerateRB() {
     const block = getRandomBlock();
     document.getElementById("RandomBlock-Image").src = block.texture;
-    document.getElementById("Block-Title").textContent = block.name;
+    document.getElementById("Block-Title").textContent = block.name.replace(/_/g, ' ').toUpperCase();
+    document.getElementById("Block-Title-plus").textContent = block.name.replace(/_/g, ' ').toUpperCase();
 }
 
 function getRandomBlock() {

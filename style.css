@@ -95,14 +95,19 @@ main {
     border-radius: 5px;
 }
 
+.RB-Generate {
+    display: inherit;
+    margin: auto;
+}
+
 .RC-Generate a, .RC-Reset a, .RB-Generate a {
     color: white;
     text-decoration: none;
 }
 
 .RandomBlock img{
-    width: 15%;
-    height: 15%;
+    width: 100%;
+    height: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
     image-rendering: pixelated;
@@ -123,4 +128,20 @@ main {
 
 .RandomBlock h2 {
     padding-bottom: 15px;
+}
+
+.plus-icon {
+    width: 15%;
+    height: 15%;
+    display: inline-block;
+}
+
+.plus-icon path:hover {
+    fill: #ffffff;
+}
+
+.RandomBlockItem0 {
+    width: 15%;
+    height: 15%;
+    display: inline-block;
 }

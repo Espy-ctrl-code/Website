@@ -247,7 +247,7 @@
         },
         {
             "name": "redstone_wire",
-            "texture": "images/Minecraft-Blocks/redstone_dust_overlay.png",
+            "texture": "images/Minecraft-Blocks/redstone_dust_line_0.png",
             "id": 49
         },
         {
@@ -1062,7 +1062,7 @@
         },
         {
             "name": "anvil",
-            "texture": "images/Minecraft-Blocks/anvil_top.png",
+            "texture": "images/Minecraft-Blocks/anvil.png",
             "id": 212
         },
         {
