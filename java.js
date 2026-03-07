@@ -48,12 +48,10 @@ function resetbox() {
 // Random Block Generator
 let blocksData = [];
 
-// Load blocks from JSON
 fetch('json/Minecraft-Blocks/minecraft_blocks.json')
     .then(res => res.json())
     .then(data => { blocksData = data.minecraft_blocks; });
 
-// Random Block Generator
 function GenerateRB() {
     const block = getRandomBlock();
     document.getElementById("RandomBlock-Image").src = block.texture;
@@ -64,3 +62,7 @@ function getRandomBlock() {
     const randomId = Math.floor(Math.random() * 600);
     return blocksData[randomId];
 }
+
+function addBlockItem() {
+    
+} 
