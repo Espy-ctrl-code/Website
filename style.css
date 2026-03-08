@@ -142,11 +142,15 @@ main {
 
 .RandomBlockItem0, .RandomBlockItem1, .RandomBlockItem2, .RandomBlockItem3 {
     width: 15%;
-    height: 15%;
+    height: 20%;
     display: inline-block;
 }
 
 .RandomBlockItem1, .RandomBlockItem2, .RandomBlockItem3 {
     visibility: hidden;
     position: absolute;
+}
+
+.BlockItems {
+    align-items: top;
 }

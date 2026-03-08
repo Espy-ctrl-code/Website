@@ -2902,32 +2902,32 @@
         },
         {
             "name": "stripped_oak_wood",
-            "texture": "images/Minecraft-Blocks/stripped_oak_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_oak_log.png",
             "id": 580
         },
         {
             "name": "stripped_spruce_wood",
-            "texture": "images/Minecraft-Blocks/stripped_spruce_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_spruce_log.png",
             "id": 581
         },
         {
             "name": "stripped_birch_wood",
-            "texture": "images/Minecraft-Blocks/stripped_birch_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_birch_log.png",
             "id": 582
         },
         {
             "name": "stripped_jungle_wood",
-            "texture": "images/Minecraft-Blocks/stripped_jungle_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_jungle_log.png",
             "id": 583
         },
         {
             "name": "stripped_acacia_wood",
-            "texture": "images/Minecraft-Blocks/stripped_acacia_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_acacia_log.png",
             "id": 584
         },
         {
             "name": "stripped_dark_oak_wood",
-            "texture": "images/Minecraft-Blocks/stripped_dark_oak_wood.png",
+            "texture": "images/Minecraft-Blocks/stripped_dark_oak_log.png",
             "id": 585
         },
         {
