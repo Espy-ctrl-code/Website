@@ -18,7 +18,7 @@ header, footer {
     border-bottom: 1px solid #1b1b1b;
 }
 
-header a, footer a {
+a {
     color: white;
     text-decoration: none;
 }
@@ -174,9 +174,6 @@ main {
     overflow: hidden;
 }
 
-.gear-icon:hover {
-}
-
 .question-icon {
     position: absolute;
     right: 13%;
@@ -189,4 +186,15 @@ main {
 
 .gear-icon svg:hover {
     transform: rotate(90deg);
+}
+
+.settings-page {
+    position: absolute;
+    left: 12.4%;
+    top: 11%;
+    width: 20%;
+    height: 50%;
+    background-color: #2525257c;
+    border-radius: 10px;
+    display: none;
 }

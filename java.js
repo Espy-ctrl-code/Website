@@ -46,20 +46,28 @@ function resetbox() {
 
 // Random Block Generator
 let blocksData = [];
+let amount;
+let blacklist;
 
-fetch('json/Minecraft-Blocks/minecraft_blocks.json')
-    .then(res => res.json())
-    .then(data => { blocksData = data.minecraft_blocks; });
-
-fetch('json/Minecraft-Blocks/amount.json')
-    .then(res => res.json())
-    .then(data => { amount = data.item; });
-
-fetch('json/Minecraft-Blocks/blacklist_minecraft_blocks.json')
-    .then(res => res.json())
-    .then(data => { blacklist = data["minecraft-block-ids"]; });
+Promise.all([
+    fetch('json/Minecraft-Blocks/minecraft_blocks.json')
+        .then(res => res.json())
+        .then(data => { blocksData = data.minecraft_blocks; }),
+    fetch('json/Minecraft-Blocks/amount.json')
+        .then(res => res.json())
+        .then(data => { amount = data.item; }),
+    fetch('json/Minecraft-Blocks/blacklist_minecraft_blocks.json')
+        .then(res => res.json())
+        .then(data => { blacklist = data["minecraft-block-ids"]; })
+]).then(() => {
+    console.log("Data loaded");
+});
 
 function GenerateRB() {
+    if (!amount || !blocksData.length || !blacklist) {
+        alert("Data not loaded yet. Please wait.");
+        return;
+    }
     for (let i = 0; i < amount; i++) {
         const block = getRandomBlock();
         document.getElementById(`RandomBlock-Image${i}`).src = block.texture;
@@ -68,6 +76,9 @@ function GenerateRB() {
 }
 
 function getRandomBlock() {
+    if (!blocksData.length || !blacklist) {
+        return null; // or handle error
+    }
     const randomId = Math.floor(Math.random() * 600);
     if (!blacklist.includes(randomId)) {
         return blocksData[randomId];
@@ -78,6 +89,7 @@ function getRandomBlock() {
 }
 
 function addBlockItem() {
+    if (!amount) return;
     document.querySelector(`.RandomBlockItem${amount}`).style.visibility = "visible";
     document.querySelector(`.RandomBlockItem${amount}`).style.position = "relative";
     amount++;
@@ -89,17 +101,30 @@ function addBlockItem() {
 } 
 
 function removeBlock() {
-    if (amount > 1) {
-        amount--;
-        document.querySelector(`.RandomBlockItem${amount}`).style.visibility = "hidden";
-        document.querySelector(`.RandomBlockItem${amount}`).style.position = "absolute";
-        checkAmountBI();
-    }
+    if (!amount || amount <= 1) return;
+    amount--;
+    document.querySelector(`.RandomBlockItem${amount}`).style.visibility = "hidden";
+    document.querySelector(`.RandomBlockItem${amount}`).style.position = "absolute";
+    checkAmountBI();
 }
 
 function checkAmountBI() {
+    if (!amount) return;
     if (amount < 4) {
         document.querySelector(".plus-icon").style.visibility = "visible";
         document.querySelector(".plus-icon").style.position = "relative";
+    }
+}
+
+let checkAmount = false;
+
+function showSettings() {
+    if (checkAmount === false) {
+        document.querySelector(".settings-page").style.display = "block";
+        checkAmount = true;
+    }
+    else {
+        document.querySelector(".settings-page").style.display = "none";
+        checkAmount = false;
     }
 }
